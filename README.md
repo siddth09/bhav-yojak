@@ -1,6 +1,12 @@
-# Bhav Yojak (भाव योजक)  
-### *Connecting Emotion Through Language*
+<p align="center">
+  <img src="public/logo.png" alt="Bhav Yojak Logo" width="400" />
+</p>
 
+<h1 align="center">Bhav Yojak (भाव योजक)</h1>
+
+<p align="center"><em>Connecting Emotion Through Language</em></p>
+
+---
 **Bhav Yojak** is a real-time voice translation web application that bridges the gap between local Indian dialects—such as Bhojpuri, Awadhi, Maithili, and Haryanvi—and English/Hindi.  
 It leverages the browser’s native **Speech Recognition**, combined with powerful AI-based translation and native **Text-to-Speech (TTS)** narration.
 
