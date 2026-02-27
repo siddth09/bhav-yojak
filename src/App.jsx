@@ -470,10 +470,10 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-orange-50 text-gray-800 p-4 md:p-8 font-sans">
-      <div className="max-w-5xl mx-auto space-y-6">
+      <div className="max-w-5xl mx-auto space-y-4 md:space-y-6">
         
         {/* Header */}
-        <div className="flex flex-col items-center justify-center space-y-2 mb-8 text-center pt-8 relative">
+        <div className="flex flex-col items-center justify-center space-y-1 mb-4 md:mb-6 text-center pt-2 md:pt-4 relative">
           
           {/* API Key Settings Button */}
           <button 
@@ -492,30 +492,30 @@ export default function App() {
           <img 
             src="/logo.png" 
             alt="Bhav Yojak Logo" 
-            className="h-32 md:h-40 w-auto object-contain mb-2"
+            className="h-20 md:h-28 w-auto object-contain"
             onError={(e) => {
-              // Fallback to text/icon if image fails to load (e.g., in the canvas preview)
+              // Fallback to text/icon if image fails to load
               e.target.onerror = null;
               e.target.style.display = 'none';
               document.getElementById('fallback-header').style.display = 'flex';
             }}
           />
           
-          {/* Fallback Header (Hidden by default, shows if logo.png is missing) */}
+          {/* Fallback Header (Hidden by default, shows only if logo.png is missing) */}
           <div id="fallback-header" className="hidden flex-col items-center">
-            <div className="bg-teal-700 p-3 rounded-full shadow-lg text-white mb-2">
+            <div className="bg-teal-700 p-3 rounded-full shadow-lg text-white mb-2 mt-4">
               <Globe className="w-8 h-8" />
             </div>
             <h1 className="text-4xl font-extrabold tracking-tight text-gray-900">
               Bhav <span className="text-teal-700">Yojak</span>
             </h1>
             <h2 className="text-lg font-medium text-teal-800 mt-1">भाव योजक</h2>
+            <p className="text-gray-500 max-w-lg mt-2 font-medium">
+              CONNECTING EMOTION THROUGH LANGUAGE
+            </p>
           </div>
 
-          <p className="text-gray-500 max-w-lg mt-2 font-medium">
-            CONNECTING EMOTION THROUGH LANGUAGE
-          </p>
-          <p className="text-gray-400 text-sm max-w-lg mt-1">
+          <p className="text-gray-400 text-sm max-w-lg mt-2">
             Speak naturally and explicitly "T-Mark" chunks of text to translate and narrate them.
           </p>
         </div>
@@ -556,7 +556,7 @@ export default function App() {
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
               placeholder={`Speak continuously in ${sourceLang.name}. When ready, hit "T-Mark" to translate...`}
-              className="flex-1 w-full p-6 text-xl bg-transparent resize-none focus:outline-none min-h-[300px]"
+              className="flex-1 w-full p-4 md:p-6 text-xl bg-transparent resize-none focus:outline-none min-h-[200px] md:min-h-[250px]"
               dir="auto"
             />
             
@@ -624,7 +624,7 @@ export default function App() {
               </div>
             </div>
             
-            <div className="flex-1 p-4 sm:p-6 text-xl min-h-[300px] overflow-y-auto space-y-4">
+            <div className="flex-1 p-4 sm:p-6 text-xl min-h-[200px] md:min-h-[250px] overflow-y-auto space-y-4">
               {outputChunks.length > 0 ? (
                 outputChunks.map((chunk) => (
                   <div key={chunk.id} className="group relative bg-white p-5 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex gap-4">
